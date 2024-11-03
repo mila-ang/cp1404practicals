@@ -1,6 +1,8 @@
 """
 CP1404 - Practical
 Languages (Client Code)
+Estimate: 10 minutes
+Actual: 15 minutes
 """
 
 from programming_language import ProgrammingLanguage
