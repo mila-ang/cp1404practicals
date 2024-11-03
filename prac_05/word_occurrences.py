@@ -4,3 +4,6 @@ Word Occurrences
 Estimate: 15 minutes
 Actual:
 """
+
+text = input("Text: ")
+words = text.split()
