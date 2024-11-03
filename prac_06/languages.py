@@ -16,5 +16,9 @@ def main():
     print(ruby)
     print(visual_basic)
 
+    languages = [python, ruby, visual_basic]
+    for language in languages:
+        print(language)
+
 
 main()
