@@ -2,7 +2,7 @@
 CP1404 - Practical
 Word Occurrences
 Estimate: 15 minutes
-Actual:
+Actual: 20 minutes
 """
 
 text = input("Text: ")
