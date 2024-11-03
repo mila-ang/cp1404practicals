@@ -18,3 +18,9 @@ COLOR_CODES = {
 }
 
 color_name = input("Enter color name: ").title()
+while color_name != "":
+    if color_name in COLOR_CODES:
+        print(f"{color_name} is {COLOR_CODES[color_name]}")
+    else:
+        print("Invalid color name")
+    color_name = input("Enter color name: ").title()
