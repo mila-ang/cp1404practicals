@@ -23,5 +23,8 @@ def main():
     # Step 3:
     print(f"Limo has fuel: {limo.fuel}")
 
+    # Step 4:
+    limo.drive(115)
+
 
 main()
