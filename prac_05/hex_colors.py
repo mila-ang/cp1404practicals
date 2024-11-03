@@ -16,3 +16,5 @@ COLOR_CODES = {
     "BlanchedAlmond": "#ffebcd",
     "Blue": "#0000ff"
 }
+
+color_name = input("Enter color name: ").title()
