@@ -17,5 +17,8 @@ def main():
     # Step 1:
     limo = Car(100)
 
+    # Step 2:
+    limo.add_fuel(20)
+
 
 main()
