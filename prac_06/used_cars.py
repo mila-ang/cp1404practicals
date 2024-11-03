@@ -20,5 +20,8 @@ def main():
     # Step 2:
     limo.add_fuel(20)
 
+    # Step 3:
+    print(f"Limo has fuel: {limo.fuel}")
+
 
 main()
