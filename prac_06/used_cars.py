@@ -15,7 +15,7 @@ def main():
     print(my_car)
 
     # Step 1:
-    limo = Car(100)
+    limo = Car(100, "Limo")
 
     # Step 2:
     limo.add_fuel(20)
@@ -25,6 +25,9 @@ def main():
 
     # Step 4:
     limo.drive(115)
+
+    # Step 5:
+    print(limo)
 
 
 main()
