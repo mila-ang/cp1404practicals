@@ -5,6 +5,7 @@ Estimate: 1 hour
 Actual:
 """
 
+from datetime import datetime
 from project import Project
 
 MENU = """- (L)oad projects  
