@@ -70,5 +70,15 @@ def save_projects(filename, projects):
                        f"{project.priority}\t{project.estimate}\t{project.completion_percent}\n")
 
 
+def filter_projects_by_date(projects):
+    """Filter projects by a start date provided by the user."""
+    date_string = input("Show projects that start after date (dd/mm/yyyy): ")
+    filter_date = datetime.datetime.strptime(date_string, "%d/%m/%Y")
+    filtered_projects = sorted([p for p in projects if p.matches_date(filter_date)],
+                               key=lambda p: p.start_date)
+
+    for project in filtered_projects:
+        print(project)
+
 
 main()
