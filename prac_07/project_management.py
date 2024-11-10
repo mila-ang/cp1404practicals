@@ -7,6 +7,34 @@ Actual:
 
 from project import Project
 
+MENU = """- (L)oad projects  
+- (S)ave projects  
+- (D)isplay projects  
+- (Q)uit"""
+
+
+def main():
+    """Run the main program loop."""
+    projects = load_projects("projects.txt")
+    print("Loaded projects from projects.txt")
+
+    while True:
+        print(MENU)
+        choice = input(">>> ").upper()
+        if choice == "L":
+            filename = input("Enter filename to load from: ")
+            projects = load_projects(filename)
+        elif choice == "S":
+            filename = input("Enter filename to save to: ")
+            save_projects(filename, projects)
+        elif choice == "D":
+            display_projects(projects)
+        elif choice == "Q":
+            print("Thank you for using the project management software.")
+            break
+        else:
+            print("Invalid choice")
+
 
 def load_projects(filename):
     """Load projects from a file and return a list of Project objects."""
@@ -31,3 +59,6 @@ def display_projects(projects):
     print("Completed projects:")
     for project in completed:
         print(f"  {project}")
+
+
+main()
