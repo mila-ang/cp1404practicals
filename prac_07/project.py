@@ -32,3 +32,7 @@ class Project:
     def matches_date(self, filter_date):
         """Return True if the project starts after the given filter date."""
         return self.start_date > filter_date
+
+    def __lt__(self, other):
+        """Less than comparison for sorting by priority."""
+        return self.priority < other.priority
