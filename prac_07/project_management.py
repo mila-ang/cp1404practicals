@@ -61,4 +61,14 @@ def display_projects(projects):
         print(f"  {project}")
 
 
+def save_projects(filename, projects):
+    """Save a list of Project objects to a file."""
+    with open(filename, 'w') as file:
+        file.write("Name\tStart Date\tPriority\tEstimate\tCompletion\n")
+        for project in projects:
+            file.write(f"{project.name}\t{project.start_date.strftime('%d/%m/%Y')}\t"
+                       f"{project.priority}\t{project.estimate}\t{project.completion_percent}\n")
+
+
+
 main()
