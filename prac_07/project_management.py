@@ -82,4 +82,14 @@ def filter_projects_by_date(projects):
         print(project)
 
 
+def add_new_project(projects):
+    """Prompt user for new project details and add to the list."""
+    name = input("Name: ")
+    start_date = input("Start date (dd/mm/yyyy): ")
+    priority = input("Priority: ")
+    estimate = input("Cost estimate: $")
+    completion = input("Percent complete: ")
+    projects.append(Project(name, start_date, priority, estimate, completion))
+
+
 main()
