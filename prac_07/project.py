@@ -24,3 +24,11 @@ class Project:
         return (f"{self.name}, start: {self.start_date.strftime('%d/%m/%Y')}, "
                 f"priority: {self.priority}, estimate: ${self.estimate:,.2f}, "
                 f"completion: {self.completion_percent}%")
+
+    def is_complete(self):
+        """Return True if the project is completed, otherwise False."""
+        return self.completion_percent == 100
+
+    def matches_date(self, filter_date):
+        """Return True if the project starts after the given filter date."""
+        return self.start_date > filter_date
