@@ -2,7 +2,7 @@
 CP1404 - Practical
 Project
 Estimate: 1 hour
-Actual:
+Actual: 2 hours
 """
 
 from datetime import datetime
