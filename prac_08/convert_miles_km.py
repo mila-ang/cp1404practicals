@@ -15,9 +15,9 @@ class MilesToKmApp(App):
         try:
             miles = float(self.root.ids.input_miles.text)
             self.output = str(miles * 1.60934)
-            self.root.ids.output_label.text = self.output
         except ValueError:
-            self.root.ids.output_label.text = "0.0"
+            self.output = "0.0"
+        self.root.ids.output_label.text = self.output
 
     def handle_up(self):
         try:
