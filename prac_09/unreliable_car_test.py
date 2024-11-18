@@ -9,16 +9,18 @@ from unreliable_car import UnreliableCar
 def main():
     """Test the UnreliableCar Class"""
     # Create instances of UnreliableCar
-    reliable_car = UnreliableCar("Mostly Reliable", 100, 90)
-    unreliable_car = UnreliableCar("Mostly Unreliable", 100, 10)
+    cars = [UnreliableCar("Always Reliable", 100, 100),
+        UnreliableCar("Never Reliable", 100, 0),
+        UnreliableCar("Mostly Reliable", 100, 90),
+        UnreliableCar("Mostly Unreliable", 100, 10)]
 
-    # Drive each car multiple times
-    for i in range(10):
-        distance = 10
-        print(f"Attempt {i + 1}:")
-        print(f"{reliable_car} drove {reliable_car.drive(distance)}km")
-        print(f"{unreliable_car} drove {unreliable_car.drive(distance)}km")
-        print()
+    # Test each car
+    for car in cars:
+        print(f"Testing {car.name}")
+        for i in range(5):
+            distance = 5
+            print(f"Attempt {i + 1}: {car.name} drove {car.drive(distance)}")
+            print()
 
 
 main()
