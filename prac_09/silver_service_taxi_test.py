@@ -15,13 +15,19 @@ def main():
     hummer.drive(18)
     print(hummer)
     print(f"Fare for 18 km: ${hummer.get_fare():.2f}")
-    assert hummer.get_fare() == 48.78, "Fare calculation is incorrect!"
+    assert hummer.get_fare() == 48.80, "Fare calculation is incorrect!"
 
-    # Start a new fare and drive 50 km
+    # Start a new fare and drive 35 km
     hummer.start_fare()
-    hummer.drive(50)
+    hummer.drive(35)
     print(hummer)
-    print(f"Fare for 50 km: ${hummer.get_fare():.2f}")
+    assert hummer.get_fare() == round(35 * 2.46 + 4.50, 1), "Fare rounding logic failed!"
+
+    # Start another fare and drive 1 km
+    hummer.start_fare()
+    hummer.drive(1)
+    print(hummer)
+    assert hummer.get_fare() == 6.96, "Small fare calculation failed!"
 
 
 main()
