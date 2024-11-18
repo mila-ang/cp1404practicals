@@ -38,7 +38,10 @@ def main():
         print(MENU)
         choice = input(">>> ").lower()
 
-    print("Goodbye!")
+    print(f"Total trip cost: ${total_bill:.2f}")
+    print("Taxis are now:")
+    for i, taxi in enumerate(taxis):
+        print(f"{i} - {taxi}")
 
 
 def choose_taxi(taxis):
